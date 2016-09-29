@@ -14,4 +14,13 @@ RUN npm install -g protractor mocha jasmine gulp && \
 # Fix for the issue with Selenium, as described here:
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
+
+ENV DISPLAY :99
+
+# Install Xvfb init script
+ADD xvfb_init /etc/init.d/xvfb
+RUN chmod a+x /etc/init.d/xvfb
+ADD xvfb-daemon-run /usr/bin/xvfb-daemon-run
+RUN chmod a+x /usr/bin/xvfb-daemon-run
+
 WORKDIR /protractor
