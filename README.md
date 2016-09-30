@@ -5,21 +5,13 @@ Gulp Protractor end to end testing for AngularJS - dockerised with headless real
 This container is intended to be used as part of the building process, running e2e protractor tests in a jenkins task. But is not mandatory.
 
 it have xvfb!
-
 it have git!
-
 it have protractor!
-
 it have gulp!
-
 it have nodejs!
-
 it have jasmine!
-
 it have mocha!
-
 it have ubuntu!
-
 it have google chrome!
 
 
