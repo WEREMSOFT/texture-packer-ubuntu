@@ -2,6 +2,27 @@
 
 Gulp Protractor end to end testing for AngularJS - dockerised with headless real Chrome.
 
+This container is intended to be used as part of the building process, running e2e protractor tests in a jenkins task. But is not mandatory.
+
+it have xvfb!
+it have git!
+it have protractor!
+it have gulp!
+it have nodejs!
+it have jasmine!
+it have mocha!
+it have ubuntu!
+it have google chrome!
+
+But wait! there is more!!!
+
+it have two scripts(check the git repo):
+
+runDockerCommand.sh : Runs a command in the container, in your actual folder, inside the container!
+
+runDockerizedProtractor.sh:  "gulp protractor" command, but first starts the xvfb service(to make google chrome believe that the container has a graphic UI ;-) ). You can replace the "gulp protractor" thing for another command you like, like "chrome facebook.com".
+
+
 ## Why headless Chrome?
 
 PhantomJS is [discouraged by Protractor creators](https://angular.github.io/protractor/#/browser-setup#setting-up-phantomjs) and for a good reason. It's basically a bag of problems. 
