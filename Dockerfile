@@ -10,6 +10,7 @@ RUN npm install -g protractor mocha jasmine gulp && \
     apt-get install -f -y && \
     apt-get clean && \
     rm google-chrome-stable_current_amd64.deb && \
+    apt-get install -y git && \
     mkdir /protractor
 # Fix for the issue with Selenium, as described here:
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
